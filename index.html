@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+        a {
+            background-color: #ec4899
+        }
+    </style>
+</head>
+
+<body class="bg-[url('1.jpeg')] bg-fixed bg-cover backdrop-blur-sm font-[Pangolin] ">
+    <div class="flex min-h-[100vh] w-full items-center justify-center">
+        <div class="w-[90%] bg-pink-200 bg-opacity-80 text-center p-4 my-4 rounded-md text-2xl">
+            Te amo mucho mi vida ❤️ <br>
+            Perdon por todo ❤️ y Claro Que tengo algo para nuestro mes <br>
+            <br> <span class="bg-black p-1 text-lg rounded-sm text-white" id="video">¡👉 Dame Clic 👈!</span>
+
+            <div id="vi" class="w-full sm:w-1/3 mx-auto">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    document.querySelector("#video").addEventListener("click", e => {
+        e.target.remove()
+        const $video = document.createElement("video");
+        $video.src = "v.mp4"
+        $video.controls = true
+        $video.play()
+        document.querySelector("#vi").appendChild($video)
+        $video.requestFullscreen()
+    })
+</script>
